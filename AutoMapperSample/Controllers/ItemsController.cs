@@ -23,6 +23,18 @@ namespace AutoMapperSample.Controllers
             {
                 MapperConfiguration mapperConfiguration = new MapperConfiguration(c =>
                 {
+                    // This appears to make no difference to be able to expand like so http://localhost:53971/odata/Items?$expand=SubGroups($expand=Item)
+                    //c.CreateMap<Item, DtoItem>()
+                    //    .PreserveReferences()
+                    //    .MaxDepth(Int32.MaxValue);
+
+                    //c.CreateMap<SubGroup, DtoSubGroup>()
+                    //    .PreserveReferences()
+                    //    .MaxDepth(Int32.MaxValue);
+
+                    //c.CreateMap<Customer, DtoCustomer>()
+                    //    .PreserveReferences()
+                    //    .MaxDepth(Int32.MaxValue);
                 });
 
                 IMapper mapper = new Mapper(mapperConfiguration);

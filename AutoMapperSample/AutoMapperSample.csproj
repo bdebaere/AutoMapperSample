@@ -113,7 +113,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\EntityFrameworkTesting.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DtoCustomer.cs" />
+    <Compile Include="Models\DtoItem.cs" />
+    <Compile Include="Models\DtoItemWithCustomer.cs" />
+    <Compile Include="Models\DtoSubGroup.cs" />
+    <Compile Include="Models\Item.cs" />
     <Compile Include="Controllers\ItemsController.cs" />
+    <Compile Include="Controllers\ItemWithCustomersController.cs" />
+    <Compile Include="Models\SubGroup.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,7 +139,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

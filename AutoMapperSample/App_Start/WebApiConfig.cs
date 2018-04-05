@@ -3,6 +3,7 @@ using System.Web.Http;
 using System.Web.OData.Builder;
 using System.Web.OData.Extensions;
 using AutoMapperSample.Controllers;
+using AutoMapperSample.Models;
 
 namespace AutoMapperSample
 {
@@ -16,6 +17,7 @@ namespace AutoMapperSample
             // Replace the standard api routing with the OData routing.
             ODataModelBuilder builder = new ODataConventionModelBuilder();
             builder.EntitySet<DtoItem>("Items");
+            builder.EntitySet<DtoItemWithCustomer>("ItemWithCustomers");
             config.MapODataServiceRoute("ODataRoute", "odata", builder.GetEdmModel());
 
             // Enables the OData filters.

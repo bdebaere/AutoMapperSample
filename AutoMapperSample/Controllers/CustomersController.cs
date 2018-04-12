@@ -32,6 +32,8 @@ namespace AutoMapperSample.Controllers
                         .ForMember(
                             dto => dto.ItemCount,
                             entity => entity.MapFrom(source => source.Items.Count));
+
+                    c.Advanced.AllowAdditiveTypeMapCreation = true;
                 });
 
                 IMapper mapper = new Mapper(mapperConfiguration);

@@ -5,6 +5,8 @@ namespace AutoMapperSample.Controllers
 {
     public class EntityFrameworkTesting : DbContext
     {
+        public DbSet<Customer> Customers { get; set; }
+
         public DbSet<Item> Items { get; set; }
 
         public EntityFrameworkTesting() : base("EntityFrameworkTesting")

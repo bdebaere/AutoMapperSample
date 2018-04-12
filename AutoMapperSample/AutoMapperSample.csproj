@@ -114,6 +114,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\EntityFrameworkTesting.cs" />
+    <Compile Include="Controllers\CustomersController.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\DtoCustomer.cs" />
     <Compile Include="Models\DtoItem.cs" />

@@ -16,6 +16,7 @@ namespace AutoMapperSample
 
             // Replace the standard api routing with the OData routing.
             ODataModelBuilder builder = new ODataConventionModelBuilder();
+            builder.EntitySet<DtoCustomer>("Customers");
             builder.EntitySet<DtoItem>("Items");
             builder.EntitySet<DtoItemWithCustomer>("ItemWithCustomers");
             config.MapODataServiceRoute("ODataRoute", "odata", builder.GetEdmModel());
